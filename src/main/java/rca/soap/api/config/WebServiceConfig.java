@@ -33,13 +33,13 @@ public class WebServiceConfig{
 
 	// /ws/oreste/suppliers.wsdl
 	// supplier-details.xsd
-	@Bean(name = "courses")
-	public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema coursesSchema) {
+	@Bean(name = "suppliers")
+	public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema suppliersSchema) {
 		DefaultWsdl11Definition definition = new DefaultWsdl11Definition();
 		definition.setPortTypeName("SupplierPort");
 		definition.setTargetNamespace("http://soap.rca/oreste/suppliers");
 		definition.setLocationUri("/ws/oreste");
-		definition.setSchema(coursesSchema);
+		definition.setSchema(suppliersSchema);
 		return definition;
 	}
 
