@@ -34,7 +34,7 @@ public class WebServiceConfig{
 	// /ws/oreste/suppliers.wsdl
 	// supplier-details.xsd
 	@Bean(name = "suppliers")
-	public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema suppliersSchema) {
+	public DefaultWsdl11Definition suppliersWsdl(XsdSchema suppliersSchema) {
 		DefaultWsdl11Definition definition = new DefaultWsdl11Definition();
 		definition.setPortTypeName("SupplierPort");
 		definition.setTargetNamespace("http://soap.rca/oreste/suppliers");
@@ -43,8 +43,25 @@ public class WebServiceConfig{
 		return definition;
 	}
 
+	// /ws/oreste/items.wsdl
+	// item-details.xsd
+	@Bean(name = "items")
+	public DefaultWsdl11Definition itemsWsdl(XsdSchema itemsSchema) {
+		DefaultWsdl11Definition definition = new DefaultWsdl11Definition();
+		definition.setPortTypeName("ItemPort");
+		definition.setTargetNamespace("http://soap.rca/oreste/items");
+		definition.setLocationUri("/ws/oreste");
+		definition.setSchema(itemsSchema);
+		return definition;
+	}
+
 	@Bean
 	public XsdSchema suppliersSchema() {
 		return new SimpleXsdSchema(new ClassPathResource("supplier-details.xsd"));
+	}
+
+	@Bean
+	public XsdSchema itemsSchema() {
+		return new SimpleXsdSchema(new ClassPathResource("item-details.xsd"));
 	}
 }

@@ -6,7 +6,7 @@
 //
 
 
-package rca.soap.oreste.suppliers;
+package rca.soap.oreste.items;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -37,8 +37,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "id"
 })
-@XmlRootElement(name = "DeleteSupplierDetailsRequest")
-public class DeleteSupplierDetailsRequest {
+@XmlRootElement(name = "GetItemDetailsRequest")
+public class GetItemDetailsRequest {
 
     protected int id;
 

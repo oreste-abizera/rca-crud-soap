@@ -6,7 +6,7 @@
 //
 
 
-package rca.soap.oreste.suppliers;
+package rca.soap.oreste.items;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -15,19 +15,21 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for SupplierDetails complex type.
+ * <p>Java class for ItemDetails complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="SupplierDetails">
+ * &lt;complexType name="ItemDetails">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="names" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="email" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="mobile" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="itemCode" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="status" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="price" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="supplier" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -37,21 +39,25 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SupplierDetails", propOrder = {
+@XmlType(name = "ItemDetails", propOrder = {
     "id",
-    "names",
-    "email",
-    "mobile"
+    "name",
+    "itemCode",
+    "status",
+    "price",
+    "supplier"
 })
-public class SupplierDetails {
+public class ItemDetails {
 
     protected int id;
     @XmlElement(required = true)
-    protected String names;
+    protected String name;
     @XmlElement(required = true)
-    protected String email;
+    protected String itemCode;
     @XmlElement(required = true)
-    protected String mobile;
+    protected String status;
+    protected int price;
+    protected int supplier;
 
     /**
      * Gets the value of the id property.
@@ -70,75 +76,107 @@ public class SupplierDetails {
     }
 
     /**
-     * Gets the value of the names property.
+     * Gets the value of the name property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getNames() {
-        return names;
+    public String getName() {
+        return name;
     }
 
     /**
-     * Sets the value of the names property.
+     * Sets the value of the name property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setNames(String value) {
-        this.names = value;
+    public void setName(String value) {
+        this.name = value;
     }
 
     /**
-     * Gets the value of the email property.
+     * Gets the value of the itemCode property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getEmail() {
-        return email;
+    public String getItemCode() {
+        return itemCode;
     }
 
     /**
-     * Sets the value of the email property.
+     * Sets the value of the itemCode property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setEmail(String value) {
-        this.email = value;
+    public void setItemCode(String value) {
+        this.itemCode = value;
     }
 
     /**
-     * Gets the value of the mobile property.
+     * Gets the value of the status property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getMobile() {
-        return mobile;
+    public String getStatus() {
+        return status;
     }
 
     /**
-     * Sets the value of the mobile property.
+     * Sets the value of the status property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setMobile(String value) {
-        this.mobile = value;
+    public void setStatus(String value) {
+        this.status = value;
+    }
+
+    /**
+     * Gets the value of the price property.
+     * 
+     */
+    public int getPrice() {
+        return price;
+    }
+
+    /**
+     * Sets the value of the price property.
+     * 
+     */
+    public void setPrice(int value) {
+        this.price = value;
+    }
+
+    /**
+     * Gets the value of the supplier property.
+     * 
+     */
+    public int getSupplier() {
+        return supplier;
+    }
+
+    /**
+     * Sets the value of the supplier property.
+     * 
+     */
+    public void setSupplier(int value) {
+        this.supplier = value;
     }
 
 }

@@ -6,7 +6,7 @@
 //
 
 
-package rca.soap.oreste.suppliers;
+package rca.soap.oreste.items;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="supplierDetails" type="{http://soap.rca/oreste/suppliers}SupplierDetails" maxOccurs="unbounded"/>
+ *         &lt;element name="itemDetails" type="{http://soap.rca/oreste/items}ItemDetails" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -38,41 +38,41 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "supplierDetails"
+    "itemDetails"
 })
-@XmlRootElement(name = "GetAllSupplierDetailsResponse")
-public class GetAllSupplierDetailsResponse {
+@XmlRootElement(name = "GetAllItemDetailsResponse")
+public class GetAllItemDetailsResponse {
 
     @XmlElement(required = true)
-    protected List<SupplierDetails> supplierDetails;
+    protected List<ItemDetails> itemDetails;
 
     /**
-     * Gets the value of the supplierDetails property.
+     * Gets the value of the itemDetails property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the supplierDetails property.
+     * This is why there is not a <CODE>set</CODE> method for the itemDetails property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getSupplierDetails().add(newItem);
+     *    getItemDetails().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link SupplierDetails }
+     * {@link ItemDetails }
      * 
      * 
      */
-    public List<SupplierDetails> getSupplierDetails() {
-        if (supplierDetails == null) {
-            supplierDetails = new ArrayList<SupplierDetails>();
+    public List<ItemDetails> getItemDetails() {
+        if (itemDetails == null) {
+            itemDetails = new ArrayList<ItemDetails>();
         }
-        return this.supplierDetails;
+        return this.itemDetails;
     }
 
 }

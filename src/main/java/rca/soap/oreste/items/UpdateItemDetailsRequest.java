@@ -6,10 +6,11 @@
 //
 
 
-package rca.soap.oreste.suppliers;
+package rca.soap.oreste.items;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -24,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="itemDetails" type="{http://soap.rca/oreste/items}ItemDetails"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -35,27 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "id"
+    "itemDetails"
 })
-@XmlRootElement(name = "DeleteSupplierDetailsRequest")
-public class DeleteSupplierDetailsRequest {
+@XmlRootElement(name = "UpdateItemDetailsRequest")
+public class UpdateItemDetailsRequest {
 
-    protected int id;
+    @XmlElement(required = true)
+    protected ItemDetails itemDetails;
 
     /**
-     * Gets the value of the id property.
+     * Gets the value of the itemDetails property.
      * 
+     * @return
+     *     possible object is
+     *     {@link ItemDetails }
+     *     
      */
-    public int getId() {
-        return id;
+    public ItemDetails getItemDetails() {
+        return itemDetails;
     }
 
     /**
-     * Sets the value of the id property.
+     * Sets the value of the itemDetails property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link ItemDetails }
+     *     
      */
-    public void setId(int value) {
-        this.id = value;
+    public void setItemDetails(ItemDetails value) {
+        this.itemDetails = value;
     }
 
 }

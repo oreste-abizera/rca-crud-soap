@@ -5,5 +5,5 @@
 // Generated on: 2021.06.25 at 03:37:17 PM SAST 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://soap.rca/oreste/suppliers", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package rca.soap.oreste.suppliers;
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://soap.rca/oreste/items", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+package rca.soap.oreste.items;

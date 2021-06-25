@@ -6,7 +6,7 @@
 //
 
 
-package rca.soap.oreste.suppliers;
+package rca.soap.oreste.items;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="supplierDetails" type="{http://soap.rca/oreste/suppliers}SupplierDetails"/>
+ *         &lt;element name="itemDetails" type="{http://soap.rca/oreste/items}ItemDetails"/>
  *         &lt;element name="message" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -37,39 +37,39 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "supplierDetails",
+    "itemDetails",
     "message"
 })
-@XmlRootElement(name = "CreateSupplierDetailsResponse")
-public class CreateSupplierDetailsResponse {
+@XmlRootElement(name = "CreateItemDetailsResponse")
+public class CreateItemDetailsResponse {
 
     @XmlElement(required = true)
-    protected SupplierDetails supplierDetails;
+    protected ItemDetails itemDetails;
     @XmlElement(required = true)
     protected String message;
 
     /**
-     * Gets the value of the supplierDetails property.
+     * Gets the value of the itemDetails property.
      * 
      * @return
      *     possible object is
-     *     {@link SupplierDetails }
+     *     {@link ItemDetails }
      *     
      */
-    public SupplierDetails getSupplierDetails() {
-        return supplierDetails;
+    public ItemDetails getItemDetails() {
+        return itemDetails;
     }
 
     /**
-     * Sets the value of the supplierDetails property.
+     * Sets the value of the itemDetails property.
      * 
      * @param value
      *     allowed object is
-     *     {@link SupplierDetails }
+     *     {@link ItemDetails }
      *     
      */
-    public void setSupplierDetails(SupplierDetails value) {
-        this.supplierDetails = value;
+    public void setItemDetails(ItemDetails value) {
+        this.itemDetails = value;
     }
 
     /**
