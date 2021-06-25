@@ -23,7 +23,7 @@ public class SupplierDetailsEndPoint {
 	// response --- GetSupplierDetailsResponse
 	@PayloadRoot(namespace = "http://soap.rca/oreste/suppliers", localPart = "GetSupplierDetailsRequest")
 	@ResponsePayload
-	public GetSupplierDetailsResponse findById(@RequestPayload GetSupplierDetailsRequest request) {
+	public GetSupplierDetailsResponse getById(@RequestPayload GetSupplierDetailsRequest request) {
 
 		Supplier supplier = supplierRepository.findById(request.getId()).get();
 
@@ -33,7 +33,7 @@ public class SupplierDetailsEndPoint {
 
 	@PayloadRoot(namespace = "http://soap.rca/oreste/suppliers", localPart = "GetAllSupplierDetailsRequest")
 	@ResponsePayload
-	public GetAllSupplierDetailsResponse findAll(@RequestPayload GetAllSupplierDetailsRequest request) {
+	public GetAllSupplierDetailsResponse getAll(@RequestPayload GetAllSupplierDetailsRequest request) {
 
 		GetAllSupplierDetailsResponse allSupplierDetailsResponse = new GetAllSupplierDetailsResponse();
 		List<Supplier> suppliers = supplierRepository.findAll();
@@ -81,7 +81,7 @@ public class SupplierDetailsEndPoint {
 	
 	@PayloadRoot(namespace = "http://soap.rca/oreste/suppliers", localPart = "DeleteSupplierDetailsRequest")
 	@ResponsePayload
-	public DeleteSupplierDetailsResponse save(@RequestPayload DeleteSupplierDetailsRequest request) {
+	public DeleteSupplierDetailsResponse delete(@RequestPayload DeleteSupplierDetailsRequest request) {
 		
 		supplierRepository.deleteById(request.getId());
 		
