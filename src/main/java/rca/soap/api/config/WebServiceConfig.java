@@ -29,4 +29,22 @@ public class WebServiceConfig{
 			messageDispatcherServlet.setTransformWsdlLocations(true);
 			return new ServletRegistrationBean(messageDispatcherServlet, "/ws/oreste/*");
 		}
+
+
+	// /ws/oreste/suppliers.wsdl
+	// supplier-details.xsd
+	@Bean(name = "courses")
+	public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema coursesSchema) {
+		DefaultWsdl11Definition definition = new DefaultWsdl11Definition();
+		definition.setPortTypeName("SupplierPort");
+		definition.setTargetNamespace("http://soap.rca/oreste/suppliers");
+		definition.setLocationUri("/ws/oreste");
+		definition.setSchema(coursesSchema);
+		return definition;
+	}
+
+	@Bean
+	public XsdSchema suppliersSchema() {
+		return new SimpleXsdSchema(new ClassPathResource("supplier-details.xsd"));
+	}
 }
